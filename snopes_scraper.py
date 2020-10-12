@@ -9,8 +9,8 @@ archive_extension = '/fact-check/rating/{}'
 page_extension = '/page/{}/'
 
 #list of pre-archived ratings
-#ratings = ['scam', 'true', 'mostly-true', 'mixture', 'mostly-false', 'false', 'outdated', 'miscaptioned', 'correct-attribution', 'misattributed', 'legend']
-ratings = [ 'mixture', 'mostly-false', 'false', 'outdated', 'miscaptioned', 'correct-attribution', 'misattributed', 'legend']
+ratings = ['scam', 'true', 'mostly-true', 'mixture', 'mostly-false', 'false', 'outdated', 'miscaptioned', 'correct-attribution', 'misattributed', 'legend']
+#ratings = [ 'mixture', 'mostly-false', 'false', 'outdated', 'miscaptioned', 'correct-attribution', 'misattributed', 'legend']
 
 #iterate through each rating
 for rating in ratings:
@@ -95,7 +95,37 @@ for rating in ratings:
     replacement_dictionary = {
         '\\u2018':"'",
         '\\u2019':"'",
-        '\\u2014':'-'
+        '\\u2014':'-',
+        '\\u201c':'"',
+        '\\u00a0':' ',
+        '\\u201d':'"',
+        '\\u2026':'...',
+        '\\u00e9':'e',
+        '\\u00bd':'1/2',
+        '\\u00f6':'o',
+        '\\u00ed':'i',
+        '\\u0107':'c',
+        '\\u00fc':'u',
+        '\\u00e1':'a',
+        '\\u00fa':'u',
+        '\\u00f3':'o',
+        '\\u00b0':' degrees',
+        '\\u0103':'a',
+        '\\u2122':' TM',
+        '\\u00a3':'',
+        '\\u2013':'-',
+        '\\u00a7':'',
+        '\\u00e4':'a',
+        '\\u00a2':'',
+        '\\u00ae':'',
+        '\\u2060':'',
+        '\\u0117':'e',
+        '\\u00c1':'A',
+        '\\u2028':'',
+        '\\u20ac':'',
+        '\\u006':'AE',
+        '\\u00f1':'n',
+        '\\ufeff':''
     }
 
 
