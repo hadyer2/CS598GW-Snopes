@@ -9,8 +9,8 @@ archive_extension = '/fact-check/rating/{}'
 page_extension = '/page/{}/'
 
 #list of pre-archived ratings
-ratings = ['scam', 'true', 'mostly-true', 'mixture', 'mostly-false', 'false', 'outdated', 'miscaptioned', 'correct-attribution', 'misattributed', 'legend']
-#ratings = [ 'mixture', 'mostly-false', 'false', 'outdated', 'miscaptioned', 'correct-attribution', 'misattributed', 'legend']
+#ratings = ['scam', 'true', 'mostly-true', 'mixture', 'mostly-false', 'false', 'outdated', 'miscaptioned', 'correct-attribution', 'misattributed', 'legend']
+ratings = [ 'mixture', 'mostly-false', 'false', 'outdated', 'miscaptioned', 'correct-attribution', 'misattributed', 'legend']
 
 #iterate through each rating
 for rating in ratings:
@@ -42,7 +42,7 @@ for rating in ratings:
             article_list = soup.findAll('main', {'class':'base-main'})[0].findAll('article')
 
             for article in article_list:
-                time.sleep(.5)
+                #time.sleep(.1)
                 output_dictionary = {}
 
                 article_url = article.findAll('a', href = True)[0]['href']
